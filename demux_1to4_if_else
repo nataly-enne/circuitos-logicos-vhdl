@@ -1,0 +1,26 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+ 
+ENTITY demux_1to4_if_else IS
+	PORT(
+		F : in STD_LOGIC;
+		S0,S1: in STD_LOGIC;
+		A,B,C,D: out STD_LOGIC
+	);
+END demux_1to4_if_else;
+ 
+ARCHITECTURE behavior OF demux_1to4_if_else IS
+BEGIN
+	PROCESS (F,S0,S1) IS
+		BEGIN
+			IF (S0 ='0' and S1 = '0') THEN
+			A <= F;
+			ELSIF (S0 ='1' and S1 = '0') THEN
+			B <= F;
+			ELSIF (S0 ='0' and S1 = '1') THEN
+			C <= F;
+			ELSE
+			D <= F;
+			END IF;
+	END PROCESS;
+END behavior;
