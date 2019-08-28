@@ -17,7 +17,7 @@ ARCHITECTURE behavior OF demux_1to4_if_else IS
             			COUT <= CIN & "000";
         		ELSIF (S = "01") THEN
             			COUT <= '0' & CIN & "00";
-        		ELSIF (sel="10") THEN
+        		ELSIF (S ="10") THEN
             			COUT <= "00" & CIN & '0';
         		ELSE
             			COUT <= "000" & CIN;
