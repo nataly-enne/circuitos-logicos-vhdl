@@ -4,7 +4,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY unity IS
 	PORT (	
 		a, b: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-		U, S1, S1, : IN STD_LOGIC;
+		U, S1, S0: IN STD_LOGIC;
 		S: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		c: OUT STD_LOGIC
 	);
@@ -39,7 +39,7 @@ ARCHITECTURE behavior OF unity IS
 	BEGIN
 		a1: arithmetic PORT MAP (U, S1, S0, b(0), AUX(0));
 		a2: arithmetic PORT MAP (U, S1, S0, b(1), AUX(1));
-		a3: arithmetic PORT MAP (U, S1, S , b(2), AUX(2));
+		a3: arithmetic PORT MAP (U, S1, S0, b(2), AUX(2));
 		a4: arithmetic PORT MAP (U, S1, S0, b(3), AUX(3));
 		a5: arithmetic PORT MAP (U, S1, S0, b(4), AUX(4));
 		a6: arithmetic PORT MAP (U, S1, S0, b(5), AUX(5));
