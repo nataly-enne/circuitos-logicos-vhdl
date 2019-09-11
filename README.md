@@ -1,5 +1,5 @@
 # circuitos-logicos-vhdl
-Códigos e simulações em VHDL da disciplina de Cicuitos Lógicos.
+Códigos e simulações em VHDL da disciplina de Circuitos Lógicos.
 
 ### Os relatórios podem ser acessados nos links abaixo:
 - [Tarefa 01 - Introfução ao VHDL](https://docs.google.com/document/d/1NtZL9XMKAC7RSjiHaN5zGBDbVsHX8Q2PrLxHyMa8h1I/edit)
