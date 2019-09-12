@@ -3,15 +3,15 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-ENTITY demux_1to8 is
+ENTITY maquina_cafe is -- demux 1 to 8
 	PORT(
 		CIN:in std_logic;
-		 S:in std_logic_vector(2 downto 0);
+		S:in std_logic_vector(2 downto 0);
 		COUT:out CHARACTER
 	);
-END demux_1to8;
+END maquina_cafe;
 
-ARCHITECTURE behavior of demux_1to8 IS
+ARCHITECTURE behavior of maquina_cafe IS
 	BEGIN
 		PROCESS(S, CIN)
 			BEGIN

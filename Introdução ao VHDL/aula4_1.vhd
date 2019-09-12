@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY aula4_1 IS END ENTITY;
+
+ARCHITECTURE behavior OF aula4_1 IS    
+
+    TYPE type_barramento IS STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL BARRAMENTO : type_barramento;
+    TYPE type_byte IS STD_LOGIC_VECTOR(3 DOWNTO 0);
+    SIGNAL BYTE : type_byte;
+
+    BEGIN
+    BYTE <= BARRAMENTO(3 DOWNTO 0);
+END ARCHITECTURE;
+
