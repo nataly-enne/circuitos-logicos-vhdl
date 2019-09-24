@@ -18,4 +18,4 @@ Projete um circuito que determina o maior de 3 números de 8 bits.
 
 ### O relatório pode ser acessado no link abaixo:
 
-- [Tarefa 04 - Combinacionais: Somador e Subtrator](https://docs.google.com/document/d/1ypocpiIW4ETA3rSLmYQ-m8gFazDrXlCR2tldS7romsc/edit)
+- [Tarefa 04 - Combinacionais: Somador e Subtrator](https://docs.google.com/document/d/1ypocpiIW4ETA3rSLmYQ-m8gFazDrXlCR2tldS7romsc)
