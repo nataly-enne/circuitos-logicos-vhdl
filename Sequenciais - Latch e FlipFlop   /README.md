@@ -2,11 +2,11 @@
 
 ### 20.01
 
-- Implemente um Latch RS:
+- Implemente um Latch RS.
 
 ### 20.02
 
-- Implemente um Flip Flop JK
+- Implemente um Flip Flop JK.
 
 ### O relatório pode ser acessado no link abaixo:
 
