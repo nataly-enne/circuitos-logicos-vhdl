@@ -1,9 +1,9 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY julgadores IS 
+ENTITY judges IS 
 	port(
-        j0, j1, j2, j3: IN std_logic;
+        J0, J1, J2, J3: IN std_logic;
         VD, VM: OUT std_logic
     );
 END ENTITY;
@@ -14,21 +14,21 @@ ARCHITECTURE behavior OF julgadores IS
 	SIGNAL reprovado: std_logic; 
 	
 	BEGIN
-        aprovado    <=  ((j0 and j2 and j3) or 
-                        (j0 and j1 and j3) or 
-                        (j1 and j2 and j3));
+        aprovado    <=  ((J0 and J2 and J3) or 
+                        (J0 and J1 and J3) or 
+                        (J1 and J2 and J3));
 
-		empate      <=  (j0 and j1 and (not j2) and (not j3)) or
-			            ((not j0) and j1 and (not j2) and j3) or
-			            (j0 and (not j1) and (not j2) and j3) or
-			            ((not j0) and (not j1) and j2 and j3) or
-			            ((not j0) and j1 and j2 and (not j3)) or
-                        (j0 and (not j1) and j2 and (not j3));
+		empate      <=  (J0 and J1 and (not J2) and (not J3)) or
+			            ((not J0) and J1 and (not J2) and J3) or
+			            (J0 and (not J1) and (not J2) and J3) or
+			            ((not J0) and (not J1) and J2 and J3) or
+			            ((not J0) and J1 and J2 and (not J3)) or
+                        (J0 and (not J1) and J2 and (not J3));
                         
-		reprovado   <=  ((not j0) and (not j1) and (not j2) and j3) or
-			            ((not j0) and (not j1) and j2 and (not j3)) or
-			            ((not j0) and j1 and (not j2) and (not j3)) or
-			            (j0 and (not j1) and (not j2) and (not j3));
+		reprovado   <=  ((not J0) and (not J1) and (not J2) and J3) or
+			            ((not J0) and (not J1) and J2 and (not J3)) or
+			            ((not J0) and J1 and (not J2) and (not J3)) or
+			            (J0 and (not J1) and (not J2) and (not J3));
         
         VD <= aprovado or empate;
 		VM <= empate or reprovado;
