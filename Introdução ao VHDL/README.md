@@ -11,5 +11,5 @@
 
 
 ### O relatório pode ser acessado no link abaixo:
-- [Tarefa 01 - Introdução ao VHDL](https://docs.google.com/document/d/1NtZL9XMKAC7RSjiHaN5zGBDbVsHX8Q2PrLxHyMa8h1I)
+- [Tarefa 01 - Introdução ao VHDL](https://docs.google.com/document/d/1NtZL9XMKAC7RSjiHaN5zGBDbVsHX8Q2PrLxHyMa8h1I/edit?usp=sharing)
 
