@@ -10,5 +10,5 @@
 
 ### O relatório pode ser acessado no link abaixo:
 
-- [Tarefa 03 - Combinacionais: Somador e Subtrator](https://docs.google.com/document/d/1XT9a0ZWHKu2AoB1a9OGwFVgY0NdRGhy17-F7cGaPsMY)
+- [Tarefa 03 - Combinacionais: Somador e Subtrator](https://docs.google.com/document/d/1XT9a0ZWHKu2AoB1a9OGwFVgY0NdRGhy17-F7cGaPsMY/edit?usp=sharing)
 
