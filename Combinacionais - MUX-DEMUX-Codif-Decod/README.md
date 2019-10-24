@@ -21,4 +21,4 @@ ou seja:
 
 
 ### O relatório pode ser acessado no link abaixo:
-- [Tarefa 02 - Combinacionais: MUX, DEMUX, Codif. e Decod](https://docs.google.com/document/d/1LDUu_odV9yFX-xh-U9HLrGtbgo9fxt9QMdpu1ZHJ8MU)
+- [Tarefa 02 - Combinacionais: MUX, DEMUX, Codif. e Decod](https://docs.google.com/document/d/1LDUu_odV9yFX-xh-U9HLrGtbgo9fxt9QMdpu1ZHJ8MU/edit?usp=sharing)
