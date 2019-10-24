@@ -12,4 +12,4 @@
 
 ### O relatório pode ser acessado no link abaixo:
 
-- [Tarefa 05 - Combinacionais: Deslocador e ULA](https://docs.google.com/document/d/1PmLqHg7ypGssO7xNDeg2wK_QI0rwsaGez678Ji1NuLo)
+- [Tarefa 05 - Combinacionais: Deslocador e ULA](https://docs.google.com/document/d/1PmLqHg7ypGssO7xNDeg2wK_QI0rwsaGez678Ji1NuLo/edit?usp=sharing)
