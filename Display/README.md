@@ -3,3 +3,7 @@ Implementar, usando a linguagem VHDL, simular, usando o Quartus, Modelsim ou out
 
 - Esse circuito deverá receber um número hexadecimal na sua entrada e apresentar na sua saída a
 representação para um display de 7 segmentos.
+
+### O relatório pode ser acessado no link abaixo:
+
+[Atividade 2.1 - Display de 7 Segmentos](https://drive.google.com/open?id=1bw-cMd2Jje83kK7O2JZOd3rfir64NIfa)
