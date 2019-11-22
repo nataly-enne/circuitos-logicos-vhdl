@@ -8,7 +8,7 @@ PORT	(
 		);
 END display;
 
-ARCHITECTURE behavior OF display IS
+ARCHITECTURE arq_display OF display IS
 
 SIGNAL s: STD_LOGIC_VECTOR(0 TO 6);
 	
@@ -60,4 +60,4 @@ BEGIN
 		g <= s(6);
 		
 	END PROCESS;
-END ARCHITECTURE;
+END arq_display;
