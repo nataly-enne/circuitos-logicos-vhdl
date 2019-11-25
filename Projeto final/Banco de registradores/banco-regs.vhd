@@ -3,9 +3,9 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY banco_regs IS
 PORT 	(  
+            clk, ler_escrever: IN STD_LOGIC; -- 0 -> lê do registrador; 1 -> escreve no registrador.
             entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
             seletor: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
-            clk, ler_escrever: IN STD_LOGIC -- ler_escrever: 0->lê; 1->escreve.
             saida: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 		);
 END banco_regs;
@@ -41,7 +41,7 @@ BEGIN
     r7: registrador PORT MAP (entrada, clk, registrador_escolhido(6), reg7);
     r8: registrador PORT MAP (entrada, clk, registrador_escolhido(7), reg8);
 
-    PROCESS(clk, entrada, seletor, ler_escrever)
+    PROCESS(clk, ler_escrever)
     BEGIN
         IF (clk'event AND clk='1') THEN
             IF (seletor="000") THEN
