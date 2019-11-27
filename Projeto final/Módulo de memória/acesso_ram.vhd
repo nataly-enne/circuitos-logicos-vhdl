@@ -1,5 +1,5 @@
 LIBRARY IEEE;
-USE IEEE_STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY acesso_ram IS
 PORT    (
@@ -10,7 +10,7 @@ PORT    (
         );
 END acesso_ram;
 
-ARCHITECTURE arq_acesso_ram IS
+ARCHITECTURE arq_acesso_ram OF acesso_ram IS
 
 COMPONENT ram is
     GENERIC (
@@ -47,7 +47,7 @@ END COMPONENT;
 
 COMPONENT banco_regs IS
 PORT 	(  
-            clk, ler_escrever: IN STD_LOGIC; -- 0 -> lê do registrador; 1 -> escreve no registrador.
+            clk, ler_escrever, resetar: IN STD_LOGIC; -- 0 -> lê do registrador; 1 -> escreve no registrador.
             entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
             seletor: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
             saida: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
@@ -56,10 +56,10 @@ END COMPONENT;
 
 -- sinais da ram
 SIGNAL wren_ram: STD_LOGIC;
-SIGNAL addr_ram, data_i_ram, data_out_ram: STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL addr_ram, data_in_ram, data_out_ram: STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 -- sinais da ula
-SIGNAL a_ula, b_ula: STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL a_ula, b_ula, s_ula: STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 -- sinais da entrada de operações (eop)
 SIGNAL resetar_eop, ler_valor_eop, executar_operacao_eop: STD_LOGIC;
@@ -69,22 +69,27 @@ SIGNAL constante_eop: STD_LOGIC_VECTOR (15 DOWNTO 0);
 -- sinais do banco de registradores (brg)
 SIGNAL ler_escrever_brg: STD_LOGIC;
 SIGNAL seletor_brg: STD_LOGIC_VECTOR (2 DOWNTO 0);
-SIGNAL saida_brg: STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL entrada_brg, saida_brg: STD_LOGIC_VECTOR (15 DOWNTO 0);
 
+-- sinais gerais
 SIGNAL opcode: STD_LOGIC_VECTOR (3 DOWNTO 0); -- código da operação: sai do módulo de entrada de operações e entra na ula
-SIGNAL valor_operado: STD_LOGIC_VECTOR(15 DOWNTO 0); -- recebe o valor de saida da ula e serve de valor de entrada para ser salvo no registrador
 
 BEGIN
-    map_ram: ram PORT MAP (clk, wren_ram, addr_ram, data_i_ram, data_out_ram);
-    map_ula: ula PORT MAP (a_ula, b_ula, opcode, valor_operado);
+    
+    map_ram: ram PORT MAP (clk, wren_ram, addr_ram, data_in_ram, data_out_ram);
+    map_ula: ula PORT MAP (a_ula, b_ula, opcode, s_ula);
     map_eop: entrada_operacoes PORT MAP (clk, bt1, bt2, bt3, entrada, resetar_eop, ler_valor_eop, executar_operacao_eop, opcode, ra_eop, rb_eop, rc_eop, constante_eop);
-    map_banco_regs: banco_regs PORT MAP (clk, ler_escrever_brg, valor_operado, seletor_brg, saida_brg);
+    map_banco_regs: banco_regs PORT MAP (clk, ler_escrever_brg, resetar_eop, entrada_brg, seletor_brg, saida_brg);
 
     PROCESS(clk, resetar_eop, ler_valor_eop, executar_operacao_eop)
     BEGIN
         IF (clk'event AND clk='1') THEN
             IF (resetar_eop='1') THEN
-                -- zerar todos os valores dos registradores
+                
+                -- zerar todos os valores dos registradores e da memória
+                -- o sinal resetar_eop está mapeado para o banco de registradores, que é responsável por zerar os valores
+                -- falta fazer o controle para zerar a memória
+
             ELSIF (ler_valor_eop='1') THEN -- ler valor e armazenar na entrada
                 
                 IF (seletor_reg="00") THEN -- salvar valor lido no primeiro registrador do banco de registradores
@@ -96,12 +101,13 @@ BEGIN
                 ELSE -- salvar valor lido no quarto registrador do banco de registradores
                     seletor_brg <= "011";
                 END IF;
-
-                valor_operado <= entrada;
+                
+                entrada_brg <= entrada;
                 ler_escrever_brg <= '1';
 
             ELSIF (executar_operacao_eop='1') THEN
-                IF (opcode="0000" OR ) THEN -- add RA, RB, RC / RA = RB + RC
+                IF (opcode="0000") THEN -- add RA, RB, RC / RA = RB + RC
+                    entrada_brg <= s_ula;
                 ELSIF (opcode="0001") THEN -- addi RA, RB, const / RA = RB + const
                 ELSIF (opcode="0010") THEN -- sub RA, RB, RC / RA = RB - RC
                 ELSIF (opcode="0011") THEN -- subi RA, RB, const / RA = RB - const

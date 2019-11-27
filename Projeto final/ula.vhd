@@ -15,9 +15,9 @@ ARCHITECTURE arq_ula OF ula IS
 BEGIN
 	PROCESS(a, b, operacao)
 	BEGIN
-		IF (operacao="0000" || operacao="0001" || operacao="1100" || operacao="1110") THEN
+		IF (operacao="0000" OR operacao="0001" OR operacao="1100" OR operacao="1110") THEN
 			s <= a + b;
-		ELSIF (operacao="0010" || operacao="0011") THEN
+		ELSIF (operacao="0010" OR operacao="0011") THEN
 			s <= a - b;
 		ELSIF (operacao="0100") THEN
 			s <= a(15 DOWNTO 1) & '1';
