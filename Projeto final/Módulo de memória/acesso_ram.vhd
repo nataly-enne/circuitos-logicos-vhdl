@@ -6,7 +6,9 @@ PORT    (
             clk: IN STD_LOGIC;
             bt1, bt2, bt3: IN STD_LOGIC;
             seletor_reg: IN STD_LOGIC_VECTOR (1 DOWNTO 0); -- seletor do registrador para armazenar um valor lido
-            entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0)
+            entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+            valor_display: OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+            operacao_finalizada, valor_lido: OUT STD_LOGIC
         );
 END acesso_ram;
 
@@ -84,8 +86,12 @@ BEGIN
     PROCESS(clk, resetar_eop, ler_valor_eop, executar_operacao_eop)
     BEGIN
         IF (clk'event AND clk='1') THEN
+            
+            operacao_finalizada <= '0';
+            valor_lido <= '0';
+
             IF (resetar_eop='1') THEN
-                
+
                 -- zerar todos os valores dos registradores e da memória
                 -- o sinal resetar_eop está mapeado para o banco de registradores, que é responsável por zerar os valores
                 -- falta fazer o controle para zerar a memória
@@ -104,8 +110,10 @@ BEGIN
                 
                 entrada_brg <= entrada;
                 ler_escrever_brg <= '1';
+                valor_lido <= '1';
 
             ELSIF (executar_operacao_eop='1') THEN
+                
                 IF (opcode="0000") THEN -- add RA, RB, RC / RA = RB + RC
                     entrada_brg <= s_ula;
                 ELSIF (opcode="0001") THEN -- addi RA, RB, const / RA = RB + const
@@ -122,6 +130,9 @@ BEGIN
                 ELSIF (opcode="1100") THEN -- w RA, RB, const / RA = mem[RB+const]
                 ELSIF (opcode="1110") THEN -- sw RA, RB, const / mem[RA+const] = RB
                 END IF;
+
+                operacao_finalizada <= '1';
+
             END IF;
         END IF;
     END PROCESS;
