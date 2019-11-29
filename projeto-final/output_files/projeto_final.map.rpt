@@ -1,0 +1,670 @@
+Analysis & Synthesis report for projeto_final
+Fri Nov 29 15:13:41 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0|altsyncram_2fd1:auto_generated
+ 15. Parameter Settings for User Entity Instance: acesso_ram:acesso|ram:map_ram
+ 16. Parameter Settings for Inferred Entity Instance: acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "acesso_ram:acesso|entrada_operacoes:map_eop"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 29 15:13:41 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; projeto_final                               ;
+; Top-level Entity Name              ; projeto_final                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 656                                         ;
+;     Total combinational functions  ; 475                                         ;
+;     Dedicated logic registers      ; 294                                         ;
+; Total registers                    ; 294                                         ;
+; Total pins                         ; 68                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,048,576                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; projeto_final      ; projeto_final      ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                         ;
++--------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path           ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                  ; Library ;
++--------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; projeto_final.vhd                          ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/projeto_final.vhd                          ;         ;
+; entrada_operacoes.vhd                      ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd                      ;         ;
+; saida.vhd                                  ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/saida.vhd                                  ;         ;
+; ula.vhd                                    ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd                                    ;         ;
+; ram.vhd                                    ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ram.vhd                                    ;         ;
+; acesso_ram.vhd                             ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/acesso_ram.vhd                             ;         ;
+; display.vhd                                ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd                                ;         ;
+; decodificador.vhd                          ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/decodificador.vhd                          ;         ;
+; banco_regs.vhd                             ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/banco_regs.vhd                             ;         ;
+; registrador.vhd                            ; yes             ; User VHDL File                                        ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/registrador.vhd                            ;         ;
+; altsyncram.tdf                             ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                            ;         ;
+; stratix_ram_block.inc                      ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;         ;
+; lpm_mux.inc                                ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                               ;         ;
+; lpm_decode.inc                             ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;         ;
+; aglobal181.inc                             ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/aglobal181.inc                                            ;         ;
+; a_rdenreg.inc                              ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                             ;         ;
+; altrom.inc                                 ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altrom.inc                                                ;         ;
+; altram.inc                                 ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altram.inc                                                ;         ;
+; altdpram.inc                               ; yes             ; Megafunction                                          ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altdpram.inc                                              ;         ;
+; db/altsyncram_2fd1.tdf                     ; yes             ; Auto-Generated Megafunction                           ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/altsyncram_2fd1.tdf                     ;         ;
+; db/projeto_final.ram0_ram_ee9e295a.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/projeto_final.ram0_ram_ee9e295a.hdl.mif ;         ;
+; db/decode_rsa.tdf                          ; yes             ; Auto-Generated Megafunction                           ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/decode_rsa.tdf                          ;         ;
+; db/decode_k8a.tdf                          ; yes             ; Auto-Generated Megafunction                           ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/decode_k8a.tdf                          ;         ;
+; db/mux_qob.tdf                             ; yes             ; Auto-Generated Megafunction                           ; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/mux_qob.tdf                             ;         ;
++--------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 656       ;
+;                                             ;           ;
+; Total combinational functions               ; 475       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 324       ;
+;     -- 3 input functions                    ; 98        ;
+;     -- <=2 input functions                  ; 53        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 459       ;
+;     -- arithmetic mode                      ; 16        ;
+;                                             ;           ;
+; Total registers                             ; 294       ;
+;     -- Dedicated logic registers            ; 294       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 68        ;
+; Total memory bits                           ; 1048576   ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 422       ;
+; Total fan-out                               ; 4887      ;
+; Average fan-out                             ; 4.73      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                        ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name       ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |projeto_final                               ; 475 (0)             ; 294 (0)                   ; 1048576     ; 0            ; 0       ; 0         ; 68   ; 0            ; |projeto_final                                                                                                                ; projeto_final     ; work         ;
+;    |acesso_ram:acesso|                       ; 447 (89)            ; 294 (103)                 ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso                                                                                              ; acesso_ram        ; work         ;
+;       |banco_regs:map_banco_regs|            ; 119 (95)            ; 153 (25)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs                                                                    ; banco_regs        ; work         ;
+;          |registrador:r1|                    ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r1                                                     ; registrador       ; work         ;
+;          |registrador:r2|                    ; 1 (1)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r2                                                     ; registrador       ; work         ;
+;          |registrador:r3|                    ; 1 (1)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r3                                                     ; registrador       ; work         ;
+;          |registrador:r4|                    ; 1 (1)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r4                                                     ; registrador       ; work         ;
+;          |registrador:r5|                    ; 1 (1)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r5                                                     ; registrador       ; work         ;
+;          |registrador:r6|                    ; 1 (1)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r6                                                     ; registrador       ; work         ;
+;          |registrador:r7|                    ; 1 (1)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r7                                                     ; registrador       ; work         ;
+;          |registrador:r8|                    ; 1 (1)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r8                                                     ; registrador       ; work         ;
+;       |entrada_operacoes:map_eop|            ; 6 (6)               ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|entrada_operacoes:map_eop                                                                    ; entrada_operacoes ; work         ;
+;       |ram:map_ram|                          ; 112 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|ram:map_ram                                                                                  ; ram               ; work         ;
+;          |altsyncram:ram_image_rtl_0|        ; 112 (0)             ; 3 (0)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0                                                       ; altsyncram        ; work         ;
+;             |altsyncram_2fd1:auto_generated| ; 112 (0)             ; 3 (3)                     ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0|altsyncram_2fd1:auto_generated                        ; altsyncram_2fd1   ; work         ;
+;                |decode_k8a:rden_decode|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0|altsyncram_2fd1:auto_generated|decode_k8a:rden_decode ; decode_k8a        ; work         ;
+;                |decode_rsa:decode3|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0|altsyncram_2fd1:auto_generated|decode_rsa:decode3     ; decode_rsa        ; work         ;
+;                |mux_qob:mux2|                ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0|altsyncram_2fd1:auto_generated|mux_qob:mux2           ; mux_qob           ; work         ;
+;       |ula:map_ula|                          ; 121 (121)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|acesso_ram:acesso|ula:map_ula                                                                                  ; ula               ; work         ;
+;    |saida:s|                                 ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|saida:s                                                                                                        ; saida             ; work         ;
+;       |decodificador:decod|                  ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|saida:s|decodificador:decod                                                                                    ; decodificador     ; work         ;
+;          |display:display1|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|saida:s|decodificador:decod|display:display1                                                                   ; display           ; work         ;
+;          |display:display2|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|saida:s|decodificador:decod|display:display2                                                                   ; display           ; work         ;
+;          |display:display3|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|saida:s|decodificador:decod|display:display3                                                                   ; display           ; work         ;
+;          |display:display4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto_final|saida:s|decodificador:decod|display:display4                                                                   ; display           ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                           ;
++----------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+--------------------------------------------+
+; Name                                                                                               ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                                        ;
++----------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+--------------------------------------------+
+; acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0|altsyncram_2fd1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 65536        ; 16           ; --           ; --           ; 1048576 ; db/projeto_final.ram0_ram_ee9e295a.hdl.mif ;
++----------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                ;
++-----------------------------------------------------+-------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                 ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------------+------------------------+
+; acesso_ram:acesso|ula:map_ula|s[0]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[1]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[2]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[3]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[4]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[5]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[6]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[7]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[8]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[9]                  ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[10]                 ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[11]                 ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[12]                 ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[13]                 ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[14]                 ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; acesso_ram:acesso|ula:map_ula|s[15]                 ; acesso_ram:acesso|ula:map_ula|s[15] ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                                     ;                        ;
++-----------------------------------------------------+-------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                 ;
++---------------------------------------------------------------------+------------------------------------------------------------------------------+
+; Register name                                                       ; Reason for Removal                                                           ;
++---------------------------------------------------------------------+------------------------------------------------------------------------------+
+; acesso_ram:acesso|entrada_operacoes:map_eop|constante[6..15]        ; Stuck at GND due to stuck port data_in                                       ;
+; acesso_ram:acesso|banco_regs:map_banco_regs|registrador_clear[1..7] ; Merged with acesso_ram:acesso|banco_regs:map_banco_regs|registrador_clear[0] ;
+; Total Number of Removed Registers = 17                              ;                                                                              ;
++---------------------------------------------------------------------+------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 294   ;
+; Number of registers using Synchronous Clear  ; 2     ;
+; Number of registers using Synchronous Load   ; 18    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 276   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                       ;
++---------------------------------------------+-----------------------------------------------+------+
+; Register Name                               ; Megafunction                                  ; Type ;
++---------------------------------------------+-----------------------------------------------+------+
+; acesso_ram:acesso|ram:map_ram|data_o[0..15] ; acesso_ram:acesso|ram:map_ram|ram_image_rtl_0 ; RAM  ;
++---------------------------------------------+-----------------------------------------------+------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r1|q[6]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r5|q[3]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r3|q[13] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r7|q[5]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r2|q[1]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r6|q[15] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r4|q[4]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r8|q[3]  ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 10 LEs               ; 40 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|b_ula[6]                                       ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|b_ula[3]                                       ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|entrada_brg[8]                                 ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 80 LEs               ; 16 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|banco_regs:map_banco_regs|saida[4]             ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |projeto_final|acesso_ram:acesso|valor_display[11]                              ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |projeto_final|acesso_ram:acesso|ula:map_ula|s[6]                               ;
+; 11:1               ; 5 bits    ; 35 LEs        ; 20 LEs               ; 15 LEs                 ; No         ; |projeto_final|acesso_ram:acesso|ula:map_ula|s[10]                              ;
+; 11:1               ; 5 bits    ; 35 LEs        ; 20 LEs               ; 15 LEs                 ; No         ; |projeto_final|acesso_ram:acesso|ula:map_ula|s[1]                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Source assignments for acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0|altsyncram_2fd1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                               ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: acesso_ram:acesso|ram:map_ram ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; data_width     ; 16    ; Signed Integer                                    ;
+; addr_width     ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0 ;
++------------------------------------+--------------------------------------------+-------------------------+
+; Parameter Name                     ; Value                                      ; Type                    ;
++------------------------------------+--------------------------------------------+-------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                          ; Untyped                 ;
+; AUTO_CARRY_CHAINS                  ; ON                                         ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                        ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                ; ON                                         ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                        ; IGNORE_CASCADE          ;
+; WIDTH_BYTEENA                      ; 1                                          ; Untyped                 ;
+; OPERATION_MODE                     ; SINGLE_PORT                                ; Untyped                 ;
+; WIDTH_A                            ; 16                                         ; Untyped                 ;
+; WIDTHAD_A                          ; 16                                         ; Untyped                 ;
+; NUMWORDS_A                         ; 65536                                      ; Untyped                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED                               ; Untyped                 ;
+; ADDRESS_ACLR_A                     ; NONE                                       ; Untyped                 ;
+; OUTDATA_ACLR_A                     ; NONE                                       ; Untyped                 ;
+; WRCONTROL_ACLR_A                   ; NONE                                       ; Untyped                 ;
+; INDATA_ACLR_A                      ; NONE                                       ; Untyped                 ;
+; BYTEENA_ACLR_A                     ; NONE                                       ; Untyped                 ;
+; WIDTH_B                            ; 1                                          ; Untyped                 ;
+; WIDTHAD_B                          ; 1                                          ; Untyped                 ;
+; NUMWORDS_B                         ; 1                                          ; Untyped                 ;
+; INDATA_REG_B                       ; CLOCK1                                     ; Untyped                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                     ; Untyped                 ;
+; RDCONTROL_REG_B                    ; CLOCK1                                     ; Untyped                 ;
+; ADDRESS_REG_B                      ; CLOCK1                                     ; Untyped                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED                               ; Untyped                 ;
+; BYTEENA_REG_B                      ; CLOCK1                                     ; Untyped                 ;
+; INDATA_ACLR_B                      ; NONE                                       ; Untyped                 ;
+; WRCONTROL_ACLR_B                   ; NONE                                       ; Untyped                 ;
+; ADDRESS_ACLR_B                     ; NONE                                       ; Untyped                 ;
+; OUTDATA_ACLR_B                     ; NONE                                       ; Untyped                 ;
+; RDCONTROL_ACLR_B                   ; NONE                                       ; Untyped                 ;
+; BYTEENA_ACLR_B                     ; NONE                                       ; Untyped                 ;
+; WIDTH_BYTEENA_A                    ; 1                                          ; Untyped                 ;
+; WIDTH_BYTEENA_B                    ; 1                                          ; Untyped                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                                       ; Untyped                 ;
+; BYTE_SIZE                          ; 8                                          ; Untyped                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA                                   ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                       ; Untyped                 ;
+; INIT_FILE                          ; db/projeto_final.ram0_ram_ee9e295a.hdl.mif ; Untyped                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                     ; Untyped                 ;
+; MAXIMUM_DEPTH                      ; 0                                          ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                     ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                     ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                     ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                     ; Untyped                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                            ; Untyped                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                            ; Untyped                 ;
+; ENABLE_ECC                         ; FALSE                                      ; Untyped                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                      ; Untyped                 ;
+; WIDTH_ECCSTATUS                    ; 3                                          ; Untyped                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E                               ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_2fd1                            ; Untyped                 ;
++------------------------------------+--------------------------------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                     ;
++-------------------------------------------+----------------------------------------------------------+
+; Name                                      ; Value                                                    ;
++-------------------------------------------+----------------------------------------------------------+
+; Number of entity instances                ; 1                                                        ;
+; Entity Instance                           ; acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0 ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                              ;
+;     -- WIDTH_A                            ; 16                                                       ;
+;     -- NUMWORDS_A                         ; 65536                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                             ;
+;     -- WIDTH_B                            ; 1                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                ;
++-------------------------------------------+----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "acesso_ram:acesso|entrada_operacoes:map_eop"                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; rc   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 68                          ;
+; cycloneiii_ff         ; 294                         ;
+;     ENA               ; 257                         ;
+;     ENA SCLR          ; 1                           ;
+;     ENA SLD           ; 18                          ;
+;     SCLR              ; 1                           ;
+;     plain             ; 17                          ;
+; cycloneiii_lcell_comb ; 475                         ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 459                         ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 83                          ;
+;         4 data inputs ; 324                         ;
+; cycloneiii_ram_block  ; 128                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.50                        ;
+; Average LUT depth     ; 3.03                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Nov 29 15:13:21 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_final -c projeto_final
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file projeto_final.vhd
+    Info (12022): Found design unit 1: projeto_final-arq_projeto_final File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/projeto_final.vhd Line: 15
+    Info (12023): Found entity 1: projeto_final File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/projeto_final.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file entrada_operacoes.vhd
+    Info (12022): Found design unit 1: entrada_operacoes-arq_entrada_operacoes File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 15
+    Info (12023): Found entity 1: entrada_operacoes File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file saida.vhd
+    Info (12022): Found design unit 1: saida-arq_saida File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/saida.vhd Line: 13
+    Info (12023): Found entity 1: saida File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/saida.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ula-arq_ula File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 14
+    Info (12023): Found entity 1: ula File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-ram_arch File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ram.vhd Line: 19
+    Info (12023): Found entity 1: ram File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ram.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file acesso_ram.vhd
+    Info (12022): Found design unit 1: acesso_ram-arq_acesso_ram File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/acesso_ram.vhd Line: 15
+    Info (12023): Found entity 1: acesso_ram File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/acesso_ram.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
+    Info (12022): Found design unit 1: display-arq_display File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 11
+    Info (12023): Found entity 1: display File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
+    Info (12022): Found design unit 1: decodificador-arq_decodificador File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/decodificador.vhd Line: 11
+    Info (12023): Found entity 1: decodificador File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/decodificador.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file banco_regs.vhd
+    Info (12022): Found design unit 1: banco_regs-arq_banco_regs File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/banco_regs.vhd Line: 13
+    Info (12023): Found entity 1: banco_regs File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/banco_regs.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
+    Info (12022): Found design unit 1: registrador-arq_regs File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/registrador.vhd Line: 12
+    Info (12023): Found entity 1: registrador File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/registrador.vhd Line: 4
+Info (12127): Elaborating entity "projeto_final" for the top level hierarchy
+Info (12128): Elaborating entity "acesso_ram" for hierarchy "acesso_ram:acesso" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/projeto_final.vhd Line: 42
+Info (12128): Elaborating entity "ram" for hierarchy "acesso_ram:acesso|ram:map_ram" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/acesso_ram.vhd Line: 81
+Info (12128): Elaborating entity "ula" for hierarchy "acesso_ram:acesso|ula:map_ula" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/acesso_ram.vhd Line: 82
+Warning (10631): VHDL Process Statement warning at ula.vhd(16): inferring latch(es) for signal or variable "s", which holds its previous value in one or more paths through the process File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[0]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[1]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[2]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[3]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[4]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[5]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[6]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[7]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[8]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[9]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[10]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[11]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[12]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[13]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[14]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (10041): Inferred latch for "s[15]" at ula.vhd(16) File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+Info (12128): Elaborating entity "entrada_operacoes" for hierarchy "acesso_ram:acesso|entrada_operacoes:map_eop" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/acesso_ram.vhd Line: 83
+Info (12128): Elaborating entity "banco_regs" for hierarchy "acesso_ram:acesso|banco_regs:map_banco_regs" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/acesso_ram.vhd Line: 84
+Info (12128): Elaborating entity "registrador" for hierarchy "acesso_ram:acesso|banco_regs:map_banco_regs|registrador:r1" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/banco_regs.vhd Line: 36
+Info (12128): Elaborating entity "saida" for hierarchy "saida:s" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/projeto_final.vhd Line: 43
+Info (12128): Elaborating entity "decodificador" for hierarchy "saida:s|decodificador:decod" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/saida.vhd Line: 23
+Info (12128): Elaborating entity "display" for hierarchy "saida:s|decodificador:decod|display:display1" File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/decodificador.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at display.vhd(54): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 54
+Warning (10492): VHDL Process Statement warning at display.vhd(55): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at display.vhd(56): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 56
+Warning (10492): VHDL Process Statement warning at display.vhd(57): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at display.vhd(58): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at display.vhd(59): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at display.vhd(60): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/display.vhd Line: 60
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "acesso_ram:acesso|ram:map_ram|ram_image_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 16
+        Info (286033): Parameter NUMWORDS_A set to 65536
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_PORT_A set to OLD_DATA
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/projeto_final.ram0_ram_ee9e295a.hdl.mif
+Info (12130): Elaborated megafunction instantiation "acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0"
+Info (12133): Instantiated megafunction "acesso_ram:acesso|ram:map_ram|altsyncram:ram_image_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "16"
+    Info (12134): Parameter "NUMWORDS_A" = "65536"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_PORT_A" = "OLD_DATA"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/projeto_final.ram0_ram_ee9e295a.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2fd1.tdf
+    Info (12023): Found entity 1: altsyncram_2fd1 File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/altsyncram_2fd1.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_rsa.tdf
+    Info (12023): Found entity 1: decode_rsa File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/decode_rsa.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_k8a.tdf
+    Info (12023): Found entity 1: decode_k8a File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/decode_k8a.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qob.tdf
+    Info (12023): Found entity 1: mux_qob File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/db/mux_qob.tdf Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[0] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[1] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[2] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[3] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[4] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[5] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[6] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[7] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[8] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[9] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[10] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[11] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[12] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[13] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[14] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Warning (13012): Latch acesso_ram:acesso|ula:map_ula|s[15] has unsafe behavior File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/ula.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal acesso_ram:acesso|entrada_operacoes:map_eop|operacao[3] File: /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/entrada_operacoes.vhd Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 886 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 46 output pins
+    Info (21061): Implemented 690 logic cells
+    Info (21064): Implemented 128 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 1041 megabytes
+    Info: Processing ended: Fri Nov 29 15:13:41 2019
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:40
+
+
