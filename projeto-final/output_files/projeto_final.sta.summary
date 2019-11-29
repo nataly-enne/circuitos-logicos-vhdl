@@ -3,75 +3,591 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : -6.573
-TNS   : -94.251
+Slack : -7.530
+TNS   : -111.519
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.491
-TNS   : -2236.335
+Slack : -6.737
+TNS   : -1906.744
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : -3.176
+TNS   : -30.963
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : -2.948
+TNS   : -55.815
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : -2.169
+TNS   : -27.750
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : -1.557
+TNS   : -14.427
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -1.554
+TNS   : -11.943
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : -1.449
+TNS   : -15.888
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : -1.038
+TNS   : -12.863
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -0.986
+TNS   : -11.554
+
+Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : -0.736
+TNS   : -9.115
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : -0.079
+TNS   : -0.180
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : 0.022
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : 0.056
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : 0.123
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.224
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.352
+Slack : 0.286
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : 0.877
+Slack : 0.584
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 1.050
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 1.069
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : -3.060
+TNS   : -27.776
+
+Type  : Slow 1200mV 85C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : -2.710
+TNS   : -27.572
+
+Type  : Slow 1200mV 85C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -2.652
+TNS   : -29.068
+
+Type  : Slow 1200mV 85C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : -2.413
+TNS   : -31.762
+
+Type  : Slow 1200mV 85C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : -2.215
+TNS   : -28.693
+
+Type  : Slow 1200mV 85C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -2.100
+TNS   : -28.367
+
+Type  : Slow 1200mV 85C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : -1.833
+TNS   : -26.459
+
+Type  : Slow 1200mV 85C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : -1.784
+TNS   : -26.133
+
+Type  : Slow 1200mV 85C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -0.252
+TNS   : -0.252
+
+Type  : Slow 1200mV 85C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -0.113
+TNS   : -0.113
+
+Type  : Slow 1200mV 85C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.524
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 0.579
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.599
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 0.609
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.727
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1414.902
+TNS   : -1218.297
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : 0.424
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 0.431
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.443
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 0.463
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.466
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : -6.032
-TNS   : -87.358
+Slack : -7.029
+TNS   : -102.840
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -5.824
-TNS   : -1991.565
+Slack : -6.107
+TNS   : -1704.908
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : -2.997
+TNS   : -28.734
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : -2.582
+TNS   : -48.973
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : -2.014
+TNS   : -25.426
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -1.467
+TNS   : -11.561
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : -1.459
+TNS   : -13.490
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : -1.380
+TNS   : -14.904
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : -1.031
+TNS   : -12.360
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -0.932
+TNS   : -11.003
+
+Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : -0.673
+TNS   : -8.760
+
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : -0.047
+TNS   : -0.047
+
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.072
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : 0.243
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
 Slack : 0.300
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.326
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : 0.846
+Slack : 0.661
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 1.066
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 1.079
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : -2.913
+TNS   : -26.925
+
+Type  : Slow 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : -2.632
+TNS   : -27.003
+
+Type  : Slow 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -2.595
+TNS   : -28.878
+
+Type  : Slow 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : -2.377
+TNS   : -31.424
+
+Type  : Slow 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : -2.163
+TNS   : -28.184
+
+Type  : Slow 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -2.075
+TNS   : -28.136
+
+Type  : Slow 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : -1.797
+TNS   : -26.182
+
+Type  : Slow 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : -1.774
+TNS   : -26.148
+
+Type  : Slow 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -0.186
+TNS   : -0.186
+
+Type  : Slow 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -0.072
+TNS   : -0.072
+
+Type  : Slow 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.511
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 0.536
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.544
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 0.555
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.679
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1398.006
+TNS   : -1201.401
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : 0.364
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.437
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : -2.871
-TNS   : -39.331
+Slack : -3.465
+TNS   : -49.059
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.584
-TNS   : -869.997
+Slack : -2.700
+TNS   : -768.635
 
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.146
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : -1.379
+TNS   : -22.812
+
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : -1.362
+TNS   : -11.282
+
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : -0.849
+TNS   : -9.570
+
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -0.483
+TNS   : -1.222
+
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : -0.468
+TNS   : -2.143
+
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : -0.421
+TNS   : -3.053
+
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : -0.175
+TNS   : -0.836
+
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -0.133
+TNS   : -0.627
+
+Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.003
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : 0.160
+Slack : -0.067
+TNS   : -0.126
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.002
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.106
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : 0.117
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 0.717
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 0.727
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : -1.083
+TNS   : -7.136
+
+Type  : Fast 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : -0.990
+TNS   : -6.966
+
+Type  : Fast 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -0.886
+TNS   : -6.703
+
+Type  : Fast 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : -0.673
+TNS   : -6.985
+
+Type  : Fast 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : -0.570
+TNS   : -6.366
+
+Type  : Fast 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -0.524
+TNS   : -6.188
+
+Type  : Fast 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : -0.436
+TNS   : -5.351
+
+Type  : Fast 1200mV 0C Model Recovery 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : -0.330
+TNS   : -4.148
+
+Type  : Fast 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : -0.116
+TNS   : -0.116
+
+Type  : Fast 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : -0.031
+TNS   : -0.031
+
+Type  : Fast 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.351
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.390
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -746.759
+TNS   : -584.665
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|entrada_operacoes:map_eop|resetar'
+Slack : 0.276
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[0]'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[3]'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[1]'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[5]'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[2]'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[4]'
+Slack : 0.377
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|entrada_operacoes:map_eop|operacao[0]'
-Slack : 0.396
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[6]'
+Slack : 0.431
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|banco_regs:map_banco_regs|registrador_escolhido[7]'
+Slack : 0.442
 TNS   : 0.000
 
 ------------------------------------------------------------

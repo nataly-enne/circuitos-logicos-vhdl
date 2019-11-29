@@ -49,7 +49,7 @@ END COMPONENT;
 
 COMPONENT banco_regs IS
 PORT 	(  
-            clk, ler_escrever, resetar: IN STD_LOGIC; -- 0 -> lê do registrador; 1 -> escreve no registrador.
+            ler_escrever, resetar: IN STD_LOGIC; -- 0 -> lê do registrador; 1 -> escreve no registrador.
             entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
             seletor: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
             saida: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
@@ -81,7 +81,7 @@ BEGIN
     map_ram: ram PORT MAP (clk, wren_ram, addr_ram, data_in_ram, data_out_ram);
     map_ula: ula PORT MAP (a_ula, b_ula, opcode, s_ula);
     map_eop: entrada_operacoes PORT MAP (clk, bt1, bt2, bt3, entrada, resetar_eop, ler_valor_eop, executar_operacao_eop, opcode, ra_eop, rb_eop, rc_eop, constante_eop);
-    map_banco_regs: banco_regs PORT MAP (clk, ler_escrever_brg, resetar_eop, entrada_brg, seletor_brg, saida_brg);
+    map_banco_regs: banco_regs PORT MAP (ler_escrever_brg, resetar_eop, entrada_brg, seletor_brg, saida_brg);
 
     PROCESS(clk, resetar_eop, ler_valor_eop, executar_operacao_eop)
     BEGIN
@@ -118,14 +118,13 @@ BEGIN
                 IF (opcode="0000") THEN -- add RA, RB, RC / RA = RB + RC
 						
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
 						-- recuperando valor de rc
 						seletor_brg <= rc_eop;
-						ler_escrever_brg <= '0';
 						b_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -138,8 +137,8 @@ BEGIN
                 ELSIF (opcode="0001") THEN -- addi RA, RB, const / RA = RB + const
 						
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -155,14 +154,13 @@ BEGIN
                 ELSIF (opcode="0010") THEN -- sub RA, RB, RC / RA = RB - RC
 						
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
 						-- recuperando valor de rc
 						seletor_brg <= rc_eop;
-						ler_escrever_brg <= '0';
 						b_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -192,8 +190,8 @@ BEGIN
                 ELSIF (opcode="0100") THEN -- sll RA, RB / RA = RB << 1
 						
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -206,8 +204,8 @@ BEGIN
                 ELSIF (opcode="0101") THEN -- slln RA, RB, const / RA = RB << const
 					 
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -223,8 +221,8 @@ BEGIN
                 ELSIF (opcode="0110") THEN -- slr RA, RB / RA = RB >> 1
 						
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -237,8 +235,8 @@ BEGIN
                 ELSIF (opcode="0111") THEN -- slrn RA, RB, const / RA = RB >> const
 					 
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -254,14 +252,13 @@ BEGIN
                 ELSIF (opcode="1000") THEN -- and RA, RB, RC / RA = RB and RC
 						
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
 						-- recuperando valor de rc
 						seletor_brg <= rc_eop;
-						ler_escrever_brg <= '0';
 						b_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -270,19 +267,17 @@ BEGIN
                   entrada_brg <= s_ula;
 						ler_escrever_brg <= '1';
 						valor_display <= s_ula;
-						valor_display <= s_ula;
 						
                 ELSIF (opcode="1001") THEN -- nand RA, RB, RC / RA = RB nand RC
 					 
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
 						-- recuperando valor de rc
 						seletor_brg <= rc_eop;
-						ler_escrever_brg <= '0';
 						b_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -294,14 +289,13 @@ BEGIN
 						
                 ELSIF (opcode="1010") THEN -- or RA, RB, RC / RA = RB or RC
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
 						-- recuperando valor de rc
 						seletor_brg <= rc_eop;
-						ler_escrever_brg <= '0';
 						b_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -314,14 +308,13 @@ BEGIN
                 ELSIF (opcode="1011") THEN -- xor RA, RB, RC / RA = RB xor RC
 						
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
 						-- recuperando valor de rc
 						seletor_brg <= rc_eop;
-						ler_escrever_brg <= '0';
 						b_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -334,8 +327,8 @@ BEGIN
                 ELSIF (opcode="1100") THEN -- w RA, RB, const / RA = mem[RB+const]
 						
 						-- recuperando valor de rb
-						seletor_brg <= rb_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= rb_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -353,8 +346,8 @@ BEGIN
                 ELSIF (opcode="1110") THEN -- sw RA, RB, const / mem[RA+const] = RB
 					 
 						-- recuperando valor de ra
-						seletor_brg <= ra_eop;
 						ler_escrever_brg <= '0';
+						seletor_brg <= ra_eop;
 						a_ula <= saida_brg;
 						valor_display <= saida_brg;
 						
@@ -366,7 +359,6 @@ BEGIN
 						
 						-- recuperando valor de rb
 						seletor_brg <= rb_eop;
-						ler_escrever_brg <= '0';
 						data_in_ram <= saida_brg;
 						wren_ram <= '1';
 						valor_display <= saida_brg;

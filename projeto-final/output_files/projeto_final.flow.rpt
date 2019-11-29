@@ -1,5 +1,5 @@
 Flow report for projeto_final
-Fri Nov 29 15:52:33 2019
+Fri Nov 29 19:47:30 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 29 15:52:33 2019       ;
+; Flow Status                        ; Successful - Fri Nov 29 19:47:29 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; projeto_final                               ;
 ; Top-level Entity Name              ; projeto_final                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 592 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 475 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 294 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 294                                         ;
+; Total logic elements               ; 814 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 760 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 141 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 141                                         ;
 ; Total pins                         ; 68 / 529 ( 13 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,048,576 / 3,981,312 ( 26 % )              ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/29/2019 15:13:21 ;
+; Start date & time ; 11/29/2019 19:45:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; projeto_final       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 180720247653335.157505120113969        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 180720247664404.157506751531840        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -94,18 +94,14 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 1004 MB             ; 00:00:39                           ;
-; Fitter               ; 00:00:44     ; 1.0                     ; 1717 MB             ; 00:01:05                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 827 MB              ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.3                     ; 933 MB              ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1074 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 1006 MB             ; 00:00:45                           ;
+; Fitter               ; 00:01:19     ; 1.0                     ; 1731 MB             ; 00:01:48                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 823 MB              ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.2                     ; 926 MB              ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 1077 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1051 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1059 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1051 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1059 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1051 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1059 MB             ; 00:00:01                           ;
-; Total                ; 00:01:19     ; --                      ; --                  ; 00:02:02                           ;
+; Total                ; 00:01:56     ; --                      ; --                  ; 00:02:50                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,17 +110,13 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+----------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; Fitter               ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; Assembler            ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; Timing Analyzer      ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; lcc-25           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Analysis & Synthesis ; lcc-12           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Fitter               ; lcc-12           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Assembler            ; lcc-12           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Timing Analyzer      ; lcc-12           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; EDA Netlist Writer   ; lcc-12           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; EDA Netlist Writer   ; lcc-12           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; EDA Netlist Writer   ; lcc-12           ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -136,12 +128,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off projeto_final -
 quartus_asm --read_settings_files=off --write_settings_files=off projeto_final -c projeto_final
 quartus_sta projeto_final -c projeto_final
 quartus_eda --read_settings_files=off --write_settings_files=off projeto_final -c projeto_final
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off projeto_final -c projeto_final --vector_source=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/Waveform.vwf --testbench_file=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim/ projeto_final -c projeto_final
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off projeto_final -c projeto_final --vector_source=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/Waveform.vwf --testbench_file=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim/ projeto_final -c projeto_final
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off projeto_final -c projeto_final --vector_source=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/Waveform.vwf --testbench_file=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim/ projeto_final -c projeto_final
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off projeto_final -c projeto_final --vector_source=/home/ericandrade/Documentos/circuitos-logicos-vhdl/projeto-final/Waveform1.vwf --testbench_file=/home/ericandrade/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim/Waveform1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/ericandrade/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim/ projeto_final -c projeto_final
 
 
 
