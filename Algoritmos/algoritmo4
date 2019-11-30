@@ -1,0 +1,16 @@
+Algoritmo 4:
+
+1. Ler um valor A;
+2. Mostrar o resultado de A * 5 usando o mínimo de operações.
+
+Passos:
+
+1º) Ler A (armazena o valor no registrador R1):
+	Valor do seletor (switches 17 ao 16): 00
+	Valor da entrada (switches 15 ao 0): 0000000000000010
+
+2º) Dando dois shifts para a esquerda em A (armazena no registrador R2 - R2=A*4):
+	Operação (switches 15 ao 0): 0101 001 000 000010
+
+3º) Somando o valor do registrador R2 com A (R1=R2+A):
+	Operação (switches 15 ao 0): 0000 000 001 000 000

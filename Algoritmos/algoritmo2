@@ -1,0 +1,36 @@
+Algoritmo 2:
+
+1. Ler 3 valores: A, B e C;
+2. Fazer: A = A + 1; B = B * 4 e C = C / 2;
+3. Mostrar no display A + B - C
+
+Passos:
+
+Passos:
+
+1º) Lendo A (armazena o valor no registrador R1):
+	Valor do seletor (switches 17 ao 16): 00
+	Valor da entrada (switches 15 ao 0): 0000000000001000
+
+2º) Lendo B (armazena o valor no registrador R2):
+	Valor do seletor (switches 17 ao 16): 01
+	Valor da entrada (switches 15 ao 0): 0000000000000010
+
+3º) Lendo C (armazena o valor no registrador R3):
+	Valor do seletor (switches 17 ao 16): 10
+	Valor da entrada (switches 15 ao 0): 0000000000000100
+
+3º) Somando 1 a A (A=A+1):
+	Operação (switches 15 ao 0): 0001 000 000 000001
+
+4º) Dando dois shifts para a esquerda em B (B=B*4):
+	Operação (switches 15 ao 0): 0101 001 001 000010
+
+5º) Dando um shift para a direita em C (C=C/2):
+	Operação (switches 15 ao 0): 0110 010 010 000000
+
+6º) Fazendo A+B (armazena no registrador R1 - R1=R1+R2):
+	Operação (switches 15 ao 0): 0000 000 000 001 000
+
+7º) Fazendo (A+B)-C (armazena no registrador R1 - R1=R1-C):
+	Operação (switches 15 ao 0): 0010 000 000 010 000
