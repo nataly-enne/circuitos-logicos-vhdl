@@ -188,7 +188,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "botoes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[0]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[2]",
 					"strict" : false
 				},
 				{
@@ -253,18 +265,6 @@
 				},
 				{
 					"name" : "switches[15]",
-					"strict" : false
-				},
-				{
-					"name" : "botoes[1]",
-					"strict" : false
-				},
-				{
-					"name" : "botoes[0]",
-					"strict" : false
-				},
-				{
-					"name" : "botoes[2]",
 					"strict" : false
 				},
 				{

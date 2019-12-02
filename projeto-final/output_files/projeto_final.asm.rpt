@@ -1,5 +1,5 @@
 Assembler report for projeto_final
-Fri Nov 29 19:47:06 2019
+Mon Dec  2 19:56:26 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Nov 29 19:47:06 2019 ;
+; Assembler Status      ; Successful - Mon Dec  2 19:56:26 2019 ;
 ; Revision Name         ; projeto_final                         ;
 ; Top-level Entity Name ; projeto_final                         ;
 ; Family                ; Cyclone IV E                          ;
@@ -52,13 +52,13 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                        ;
-+--------------------------------------------------------------------------------------------------+
-; File Name                                                                                        ;
-+--------------------------------------------------------------------------------------------------+
-; /home/ericandrade/Documentos/circuitos-logicos-vhdl/projeto-final/output_files/projeto_final.sof ;
-+--------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                         ;
++---------------------------------------------------------------------------------------------------+
+; File Name                                                                                         ;
++---------------------------------------------------------------------------------------------------+
+; /home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/output_files/projeto_final.sof ;
++---------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -66,8 +66,8 @@ refer to the applicable agreement for further details.
 +----------------+----------------------------+
 ; Option         ; Setting                    ;
 +----------------+----------------------------+
-; JTAG usercode  ; 0x0104F82B                 ;
-; Checksum       ; 0x0104F82B                 ;
+; JTAG usercode  ; 0x0105B383                 ;
+; Checksum       ; 0x0105B383                 ;
 +----------------+----------------------------+
 
 
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 29 19:47:00 2019
+    Info: Processing started: Mon Dec  2 19:56:20 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off projeto_final -c projeto_final
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 823 megabytes
-    Info: Processing ended: Fri Nov 29 19:47:06 2019
+    Info: Peak virtual memory: 822 megabytes
+    Info: Processing ended: Mon Dec  2 19:56:26 2019
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 
