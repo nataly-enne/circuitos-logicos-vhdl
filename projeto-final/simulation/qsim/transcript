@@ -1,7 +1,7 @@
 # do projeto_final.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:47:31 on Nov 29,2019
+# Start time: 10:16:38 on Dec 03,2019
 # vcom -work work projeto_final.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,20 +16,20 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity projeto_final
 # -- Compiling architecture structure of projeto_final
-# End time: 19:47:31 on Nov 29,2019, Elapsed time: 0:00:00
+# End time: 10:16:39 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:47:31 on Nov 29,2019
-# vcom -work work Waveform1.vwf.vht 
+# Start time: 10:16:39 on Dec 03,2019
+# vcom -work work Waveform2.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity projeto_final_vhd_vec_tst
 # -- Compiling architecture projeto_final_arch of projeto_final_vhd_vec_tst
-# End time: 19:47:31 on Nov 29,2019, Elapsed time: 0:00:00
+# End time: 10:16:39 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.projeto_final_vhd_vec_tst 
-# Start time: 19:47:31 on Nov 29,2019
+# Start time: 10:16:39 on Dec 03,2019
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -52,9 +52,9 @@
 # Loading cycloneive.cycloneive_ram_block(block_arch)
 # Loading cycloneive.cycloneive_ram_register(reg_arch)
 # Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 146370 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 165656 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
 # Simulation time: 0 ps
-# End time: 19:47:38 on Nov 29,2019, Elapsed time: 0:00:07
+# End time: 10:16:47 on Dec 03,2019, Elapsed time: 0:00:08
 # Errors: 0, Warnings: 1

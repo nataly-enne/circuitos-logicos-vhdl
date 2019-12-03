@@ -16,7 +16,7 @@ ARCHITECTURE arq_projeto_final OF projeto_final IS
 
 COMPONENT entrada_operacoes IS
 PORT	(
-			clk, bt1, bt2, bt3: IN STD_LOGIC;
+			clk, bt1, bt2, bt3, operacao_finalizada, valor_lido: IN STD_LOGIC;
 			entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
 			resetar, ler_valor, executar_operacao: OUT STD_LOGIC;
 			operacao: OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
@@ -54,7 +54,7 @@ SIGNAL ra, rb, rc: STD_LOGIC_VECTOR (2 DOWNTO 0);
 			
 BEGIN
 	
-	entrada: entrada_operacoes PORT MAP (clk, botoes(0), botoes(1), botoes(2), switches(15 DOWNTO 0), resetar, ler_valor, executar_operacao, operacao, ra, rb, rc, constante);
+	entrada: entrada_operacoes PORT MAP (clk, botoes(0), botoes(1), botoes(2), operacao_finalizada, valor_lido, switches(15 DOWNTO 0), resetar, ler_valor, executar_operacao, operacao, ra, rb, rc, constante);
 	acesso: acesso_ram PORT MAP (clk, resetar, ler_valor, executar_operacao, switches(15 DOWNTO 0), switches(17 DOWNTO 16), operacao, ra, rb, rc, constante, valor_display, operacao_finalizada, valor_lido);
 	s: saida PORT MAP (valor_display, operacao_finalizada, valor_lido, a, b, c, d, e, f, g, leds(0), leds(1));
 	 

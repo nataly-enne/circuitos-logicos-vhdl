@@ -3,7 +3,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY entrada_operacoes IS
 PORT    (
-            clk, bt1, bt2, bt3: IN STD_LOGIC;
+            clk, bt1, bt2, bt3, operacao_finalizada, valor_lido: IN STD_LOGIC;
             entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
             resetar, ler_valor, executar_operacao: OUT STD_LOGIC;
             operacao: OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
@@ -15,20 +15,30 @@ END entrada_operacoes;
 ARCHITECTURE arq_entrada_operacoes OF entrada_operacoes IS
 
 SIGNAL operacao_atual: STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL resetar_aux, ler_valor_aux, executar_operacao_aux: STD_LOGIC;
 
 BEGIN
     PROCESS(clk, bt1, bt2, bt3) 
     BEGIN
-        IF (clk'event AND clk='1') THEN
-            IF (bt1='1') THEN -- resetar valores
+		IF (clk'event AND clk='1') THEN -- so consegue operar na borda de subida
+            IF (bt1='0') THEN -- resetar valores
                 resetar <= '1';
                 ler_valor <= '0';
                 executar_operacao <= '0';
-            ELSIF (bt2='1') THEN -- ler dado de entrada
+					 
+					resetar_aux <= '1';
+					ler_valor_aux <= '0';
+					executar_operacao_aux <= '0';	
+            ELSIF (bt2='0') THEN -- ler dado de entrada
                 resetar <= '0';
                 ler_valor <= '1';
                 executar_operacao <= '0';
-            ELSIF (bt3='1') THEN -- ler e executar operacao
+					 
+					resetar_aux <= '0';
+					ler_valor_aux <= '1';
+					executar_operacao_aux <= '0';	
+					
+            ELSIF (bt3='0') THEN -- ler e executar operacao
                 
                 operacao_atual <= entrada;
 
@@ -64,12 +74,21 @@ BEGIN
                 resetar <= '0';
                 ler_valor <= '0';
                 executar_operacao <= '1';
+					 
+					 resetar_aux <= '0';
+					ler_valor_aux <= '0';
+					executar_operacao_aux <= '1';	
 
-            ELSE
-                resetar <= '0';
-                ler_valor <= '0';
-                executar_operacao <= '0';
+            ELSIF (resetar_aux='1') THEN 
+					resetar <= '0';
+					resetar_aux <= '0';
+				ELSIF (ler_valor_aux='1' AND valor_lido='0') THEN -- valor_lido em 0 quer dizer que foi lido
+					ler_valor <= '0';
+					ler_valor_aux <= '0';
+				ELSIF (executar_operacao_aux='1' AND operacao_finalizada='0') THEN -- operacao_finalizada em 0 quer dizer que terminou
+					executar_operacao <= '0';
+					executar_operacao_aux <= '0';	
             END IF;
-        END IF;
+        END IF;	 
     END PROCESS;
 END arq_entrada_operacoes;

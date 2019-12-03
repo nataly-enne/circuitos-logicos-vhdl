@@ -7,16 +7,16 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-d/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim
+Z0 d/home/brunasdcosta/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim
 Ehard_block
-Z0 w1575067649
-Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
-Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z6 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
-Z7 d/home/ericandrade/Documentos/circuitos-logicos-vhdl/projeto-final/simulation/qsim
+Z1 w1575378995
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+R0
 Z8 8projeto_final.vho
 Z9 Fprojeto_final.vho
 l0
@@ -25,21 +25,21 @@ VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1575067651
+Z11 !s110 1575378998
 !i10b 1
-Z12 !s108 1575067651.000000
+Z12 !s108 1575378998.000000
 Z13 !s90 -work|work|projeto_final.vho|
 Z14 !s107 projeto_final.vho|
 !i113 1
 Z15 o-work work
 Z16 tExplicit 1 CvgOpt 0
 Astructure
-R1
 R2
 R3
 R4
 R5
 R6
+R7
 DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
 l64
 L50
@@ -56,16 +56,16 @@ R14
 R15
 R16
 Eprojeto_final
-R0
-R2
-R6
 R1
-Z17 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
 R3
+R7
+R2
+Z17 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
 R4
 R5
+R6
 Z18 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
-R7
+R0
 R8
 R9
 l0
@@ -74,7 +74,7 @@ V>mOY;IAeX3@];:XANT^iN2
 !s100 :`;D0nOIX3Q4c@XWo?Z=b1
 R10
 32
-R11
+Z19 !s110 1575378999
 !i10b 1
 R12
 R13
@@ -83,22 +83,22 @@ R14
 R15
 R16
 Astructure
-R2
-R6
-R1
-R17
 R3
+R7
+R2
+R17
 R4
 R5
+R6
 R18
 DEx4 work 13 projeto_final 0 22 >mOY;IAeX3@];:XANT^iN2
-l1481
+l1566
 L167
-VhiangEO@>b:8m`GCh;g[T0
-!s100 :YL]Q7NL4KPi2O6mYGNj43
+VSVnbNoeL2WUSl9lW3GUnn0
+!s100 <^;aEnVT424kiVPV2>4RW2
 R10
 32
-R11
+R19
 !i10b 1
 R12
 R13
@@ -107,41 +107,41 @@ R14
 R15
 R16
 Eprojeto_final_vhd_vec_tst
-Z19 w1575067647
-R4
+Z20 w1575378993
 R5
-R7
-Z20 8Waveform1.vwf.vht
-Z21 FWaveform1.vwf.vht
+R6
+R0
+Z21 8Waveform2.vwf.vht
+Z22 FWaveform2.vwf.vht
 l0
 L31
 VHeBWMIPPePEnPFnCm>gM]2
 !s100 4@`_fU9gYEJk5E0CF_?FO2
 R10
 32
-R11
+R19
 !i10b 1
-R12
-Z22 !s90 -work|work|Waveform1.vwf.vht|
-Z23 !s107 Waveform1.vwf.vht|
+Z23 !s108 1575378999.000000
+Z24 !s90 -work|work|Waveform2.vwf.vht|
+Z25 !s107 Waveform2.vwf.vht|
 !i113 1
 R15
 R16
 Aprojeto_final_arch
-R4
 R5
-Z24 DEx4 work 25 projeto_final_vhd_vec_tst 0 22 HeBWMIPPePEnPFnCm>gM]2
+R6
+Z26 DEx4 work 25 projeto_final_vhd_vec_tst 0 22 HeBWMIPPePEnPFnCm>gM]2
 l64
 L33
-Z25 Vcff1WEMMlA@e>[aa>9D`R0
-Z26 !s100 oR:GmnBcB?IYKTak3FGO92
+V5<?6cXFD7zY`ac6RSB4U=2
+!s100 _[iORUW_^?WS`O1cg;aON0
 R10
 32
-R11
+R19
 !i10b 1
-R12
-R22
 R23
+R24
+R25
 !i113 1
 R15
 R16

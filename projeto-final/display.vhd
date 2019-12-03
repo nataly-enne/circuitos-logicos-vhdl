@@ -3,7 +3,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY display IS
 PORT	(	
-            entrada: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			entrada: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			a, b, c, d, e, f, g: OUT STD_LOGIC
 		);
 END display;

@@ -2,148 +2,76 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'entrada_operacoes:entrada|executar_operacao'
-Slack : -8.124
-TNS   : -332.523
-
 Type  : Slow 1200mV 85C Model Setup 'entrada_operacoes:entrada|operacao[0]'
-Slack : -7.512
-TNS   : -430.868
-
-Type  : Slow 1200mV 85C Model Setup 'acesso_ram:acesso|ler_escrever_brg'
-Slack : -6.914
-TNS   : -134.273
+Slack : -7.107
+TNS   : -105.980
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.273
-TNS   : -2650.354
-
-Type  : Slow 1200mV 85C Model Hold 'entrada_operacoes:entrada|executar_operacao'
-Slack : -0.320
-TNS   : -3.009
-
-Type  : Slow 1200mV 85C Model Hold 'entrada_operacoes:entrada|operacao[0]'
-Slack : -0.175
-TNS   : -0.571
+Slack : -6.564
+TNS   : -2252.391
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.300
-TNS   : 0.000
+Slack : -0.590
+TNS   : -0.590
 
-Type  : Slow 1200mV 85C Model Hold 'acesso_ram:acesso|ler_escrever_brg'
-Slack : 1.180
+Type  : Slow 1200mV 85C Model Hold 'entrada_operacoes:entrada|operacao[0]'
+Slack : 0.257
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1250.422
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada_operacoes:entrada|executar_operacao'
-Slack : 0.307
-TNS   : 0.000
+TNS   : -1423.897
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada_operacoes:entrada|operacao[0]'
-Slack : 0.402
+Slack : 0.400
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'acesso_ram:acesso|ler_escrever_brg'
-Slack : 0.413
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'entrada_operacoes:entrada|executar_operacao'
-Slack : -7.680
-TNS   : -314.119
 
 Type  : Slow 1200mV 0C Model Setup 'entrada_operacoes:entrada|operacao[0]'
-Slack : -7.036
-TNS   : -396.585
-
-Type  : Slow 1200mV 0C Model Setup 'acesso_ram:acesso|ler_escrever_brg'
-Slack : -6.211
-TNS   : -120.644
+Slack : -6.541
+TNS   : -97.097
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -5.517
-TNS   : -2343.943
-
-Type  : Slow 1200mV 0C Model Hold 'entrada_operacoes:entrada|executar_operacao'
-Slack : -0.219
-TNS   : -1.670
-
-Type  : Slow 1200mV 0C Model Hold 'entrada_operacoes:entrada|operacao[0]'
-Slack : -0.118
-TNS   : -0.253
+Slack : -5.949
+TNS   : -2012.542
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.284
-TNS   : 0.000
+Slack : -0.563
+TNS   : -0.563
 
-Type  : Slow 1200mV 0C Model Hold 'acesso_ram:acesso|ler_escrever_brg'
-Slack : 1.003
+Type  : Slow 1200mV 0C Model Hold 'entrada_operacoes:entrada|operacao[0]'
+Slack : 0.369
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -1233.526
+TNS   : -1407.001
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada_operacoes:entrada|operacao[0]'
-Slack : 0.319
+Slack : 0.345
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada_operacoes:entrada|executar_operacao'
-Slack : 0.386
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|ler_escrever_brg'
-Slack : 0.406
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'entrada_operacoes:entrada|executar_operacao'
-Slack : -4.049
-TNS   : -138.632
-
-Type  : Fast 1200mV 0C Model Setup 'entrada_operacoes:entrada|operacao[0]'
-Slack : -3.554
-TNS   : -172.318
-
-Type  : Fast 1200mV 0C Model Setup 'acesso_ram:acesso|ler_escrever_brg'
-Slack : -3.399
-TNS   : -62.955
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -3.146
-TNS   : -1277.777
+Slack : -3.047
+TNS   : -945.351
 
-Type  : Fast 1200mV 0C Model Hold 'entrada_operacoes:entrada|operacao[0]'
-Slack : -0.244
-TNS   : -2.686
-
-Type  : Fast 1200mV 0C Model Hold 'entrada_operacoes:entrada|executar_operacao'
-Slack : 0.018
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Setup 'entrada_operacoes:entrada|operacao[0]'
+Slack : -2.991
+TNS   : -44.725
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.113
-TNS   : 0.000
+Slack : -0.388
+TNS   : -0.388
 
-Type  : Fast 1200mV 0C Model Hold 'acesso_ram:acesso|ler_escrever_brg'
-Slack : 0.504
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Hold 'entrada_operacoes:entrada|operacao[0]'
+Slack : -0.202
+TNS   : -0.224
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -613.431
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada_operacoes:entrada|executar_operacao'
-Slack : 0.196
-TNS   : 0.000
+TNS   : -755.889
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada_operacoes:entrada|operacao[0]'
-Slack : 0.252
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'acesso_ram:acesso|ler_escrever_brg'
-Slack : 0.282
+Slack : 0.404
 TNS   : 0.000
 
 ------------------------------------------------------------

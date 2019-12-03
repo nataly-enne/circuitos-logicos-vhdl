@@ -188,15 +188,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "botoes[1]",
-					"strict" : false
-				},
-				{
-					"name" : "botoes[0]",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[1]",
 					"strict" : false
 				},
 				{
@@ -204,7 +200,35 @@
 					"strict" : false
 				},
 				{
+					"name" : "botoes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[14]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[15]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[13]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[12]",
+					"strict" : false
+				},
+				{
 					"name" : "switches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[17]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[16]",
 					"strict" : false
 				},
 				{
@@ -249,30 +273,6 @@
 				},
 				{
 					"name" : "switches[11]",
-					"strict" : false
-				},
-				{
-					"name" : "switches[12]",
-					"strict" : false
-				},
-				{
-					"name" : "switches[13]",
-					"strict" : false
-				},
-				{
-					"name" : "switches[14]",
-					"strict" : false
-				},
-				{
-					"name" : "switches[15]",
-					"strict" : false
-				},
-				{
-					"name" : "switches[17]",
-					"strict" : false
-				},
-				{
-					"name" : "switches[16]",
 					"strict" : false
 				}
 			]
