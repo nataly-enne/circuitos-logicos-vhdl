@@ -23,3 +23,6 @@
   ― Maioria dos juízes acionou o botão.
   ― 2 juízes acionaram os seus botões.
   ― 1 ou nenhum dos juízes acionou o botão.
+### O relatório pode ser acessado no link abaixo:
+
+- [Tarefa 06 - Implementação de uma banca julgadora](https://drive.google.com/file/d/1QwSIef-9BWF9nPTO8_O_DPsRPWEhWV1M/view?usp=sharing)
