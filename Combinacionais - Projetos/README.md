@@ -23,7 +23,3 @@
   ― Maioria dos juízes acionou o botão.
   ― 2 juízes acionaram os seus botões.
   ― 1 ou nenhum dos juízes acionou o botão.
-
-### O relatório pode ser acessado no link abaixo:
-
-- [Tarefa 06 - Combinacionais: Projeto - Banca Julgadora](https://docs.google.com/document/d/1ND77LBDwA2bWw3cmuEwO3OwIpdTkxdSMe6pXN1fAWQU/edit?usp=sharing)
